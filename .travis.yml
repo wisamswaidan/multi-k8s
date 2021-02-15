@@ -10,7 +10,8 @@ before_install:
   #- curl https://sdk.cloud.google.com | bash -s -- --disable-prompts > /dev/null;
   - export CLOUDSDK_CORE_DISABLE_PROMPTS=1
   - curl https://sdk.cloud.google.com | bash > /dev/null;
-  - source ~/google-cloud-sdk/bin/gcloud
+  - source /home/google.cloud.sdk/path.bash.inc
+  #- source /home/google-cloud-sdk/bin/gcloud/path.bash.inc
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project multi-k8s-304814
