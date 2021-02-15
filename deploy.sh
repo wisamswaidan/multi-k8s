@@ -1,4 +1,4 @@
-docker build -t swaiidan2021/multi-client:latest -t swaiidan2021/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t swaiidan202/multi-client:latest -t swaiidan2021/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t swaiidan2021/multi-server:latest -t swaiidan2021/multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t swaiidan2021/multi-worker:latest -t swaiidan2021/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push swaiidan2021/multi-client:latest
