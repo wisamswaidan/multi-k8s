@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: levero-dk-tls
+spec:
+  secretName: levero-dk
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: levero.dk
+  dnsNames:
+    - levero.dk
+    - www.levero.dk
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - levero.dk
+          - www.levero.dk
